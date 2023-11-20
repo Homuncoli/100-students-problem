@@ -148,7 +148,7 @@ function getUnopenedBox(number, showBoxNumbering) {
     <div class='box' onclick='openBox(this)' number='${number}'>
         <div style='position: relative; text-align: center;'>
             <div style='position: absolute; bottom: 6%; left: 50%; transform: translate(-50%, -50%);'></div>
-            <img src="Empty cardboard box.svg" style='width: 75px; heigth: 75px; left: 50%;'/>
+            <img src="flat-cardboard-box.svg" style='width: 75px; heigth: 75px; left: 50%;'/>
         </div>
         <div class='boxLabel' ${showBoxNumbering ? "" : "hidden"}>${number}</div>
     </div>
