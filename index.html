@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>100 Studenten Problem</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="script.js"></script> 
+    </head>
+    <body data-bs-theme="dark">
+        <div id="startForm">
+            <div class="jumbotron text-white">
+                <h1 class="display-4">100 Studenten Problem</h1>
+                <hr class="my-4">
+                <div class="mb-3" style="display: flex;">
+                    <div style="width: 50%">
+                        <label for="anzahlDerBoxenInput" class="form-label">Anzahl der Boxen</label>
+                        <input type="number" class="form-control" id="anzahlDerBoxenInput" value="100">
+                    </div>
+                    <div style="width: 50%; margin-left: 4%;">
+                        <label for="seedInput" class="form-label">Seed</label>
+                        <input type="number" class="form-control" id="seedInput" value="23">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="anzahlDerVersucheInput" class="form-label">Anzahl der Versuche</label>
+                    <input type="number" class="form-control" id="anzahlDerVersucheInput" value="50">
+                </div>
+                <div class="mb-3" id="sim-studenten">
+                    <label for="anzahlDerStudenten" class="form-label">Anzahl der Studenten</label>
+                    <input type="number" class="form-control" id="anzahlDerStudenten" value="100">
+                </div>
+                <div class="mb-3" id="sim-count">
+                    <label for="anzahlDerSimulationen" class="form-label">Anzahl der Simulationen</label>
+                    <input type="number" class="form-control" id="anzahlDerSimulationen" value="50">
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="showBoxNumbering">
+                    <label class="form-check-label" for="showBoxNumbering">
+                      Show Box Numbering
+                    </label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="showLastBox">
+                    <label class="form-check-label" for="showLastBox">
+                      Highlight last Box
+                    </label>
+                </div>
+                <div style="display: flex;">
+                    <p class="lead">
+                        <button type="button" class="btn btn-primary" id="play-button">Play!</button>
+                    </p>
+                    <p class="lead" style="margin-left: 1%;">
+                        <button type="button" class="btn btn-primary" id="simulation-button">Simulate</button>
+                    </p>
+                    <p class="lead" style="margin-left: 1%;" id="simulation-selection">
+                        <select class="form-select" aria-label="Default select example" id="stratSelect">
+                            <option value="1" selected>Zufällig</option>
+                            <option value="2">Ring</option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="game-field">
+            <div class="factDisplay">
+                <div id="yourNumber" style="text-align: left;"   class="fact"></div>
+                <div id="triesLeft"  style="text-align: center;" class="fact"></div>
+                <div id="gameStatus" style="text-align: right;"  class="fact"></div>
+            </div>
+            <div id="play-field"></div>
+        </div>
+        <div id="sim-field" style="margin: 8%; margin-top: 1%;">
+            <div class="factDisplay" style="margin-left: 0%; margin-right: 0%;">
+                <div id="winrate-total-display" style="text-align: left;"   class="fact"></div>
+                <div id="wins-total-display"    style="text-align: center;" class="fact"></div>
+                <div id="loss-total-display"    style="text-align: right;"  class="fact"></div>
+            </div>
+            <table class="table table-secondary table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Winrate</th>
+                    <th scope="col">Wins</th>
+                    <th scope="col">Losses</th>
+                  </tr>
+                </thead>
+                <tbody id="sim-log" class="thead-light">
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

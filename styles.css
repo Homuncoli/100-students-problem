@@ -1,0 +1,81 @@
+body {
+    width: 100%;
+    height: 100%; 
+    background-color: #853B32;
+    color: white;
+    /* background-color: darkslategrey; */
+}
+
+.jumbotron {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 3%;
+}
+
+.factDisplay {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#play-field {
+    margin: 8%;
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#gameStatus {
+    margin-right: 8%;
+}
+
+.loose {
+    text: red;
+}
+
+.won {
+    color: white;
+}
+
+.fact {
+    border: 2px solid white;
+    font-size: 3em;
+}
+
+.box {
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    background: #BF7D58;
+    margin: 2px;
+    transition: all .05s ease-in-out;
+    color: black;
+}
+
+.box:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.boxLabel {
+    border: 1px solid black;
+    color: color;
+    width: 100%;
+}
+
+.boxContent {
+    margin-top: 10%;
+    border: 1px solid black;
+    color: black;
+    width: 100%;
+}
+
+.lastClicked {
+    background: blanchedalmond;
+}
+
+.previouslyClicked {
+    background: #BF7D58;
+}
