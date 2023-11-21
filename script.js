@@ -105,9 +105,9 @@ function openBox(event) {
 }
 
 function updateStatusDisplay() {
-    let text = "Ongoing";
+    let text = "Laufend";
     if (!GAME.is_ongoing()) {
-        text = GAME.is_success() ? "<span class='won'>Won!</span>" : "<span class='loose'>Loose :(</span>";
+        text = GAME.is_success() ? "<span class='won'>Gewonnen!</span>" : "<span class='loose'>Verloren :(</span>";
     }
     $("#gameStatus").html(text);
 }
@@ -126,11 +126,11 @@ function updateLastElement(event) {
 }
 
 function updateTriesDisplay() {
-    $("#triesLeft").text(`Tries left: ${GAME.tries_left()}`)
+    $("#triesLeft").text(`Versuche übrig: ${GAME.tries_left()}`)
 }
 
 function updateYourNumberDisplay() {
-    $("#yourNumber").text(`Your number: ${GAME.your_number()}`)
+    $("#yourNumber").text(`Gesuchte Zahl: ${GAME.your_number()}`)
 }
 
 function getOpenedBox(number, content, showBoxNumbering) {
